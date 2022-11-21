@@ -1,0 +1,59 @@
+﻿<Window x:Class="project6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:project6"
+        mc:Ignorable="d"
+        Title="Практическая работа №6" Height="500" Width="800" Background="#FFCDE9F1" KeyDown="Enter_KeyDown">
+    <Grid>
+        <Menu VerticalAlignment="Top" Background="#FF7B83D2">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Создать"/>
+                <MenuItem Header="Открыть"/>
+                <MenuItem Header="Сохранить"/>
+                <Separator/>
+                <MenuItem Header="Выход" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Команды"/>
+            <MenuItem Header="Справка">
+                <MenuItem Header="О программе" Click="About_Program_Click"/>
+            </MenuItem>
+        </Menu>
+        <GroupBox Margin="55,43,0,0" Header="Первая тройка чисел:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Height="163">
+            <Grid>
+                <TextBox x:Name="inputValue1" Opacity="0.7" Width="100" Margin="194,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValue2" Opacity="0.7" Width="100" Margin="194,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValue3" Opacity="0.7" Width="100" Margin="194,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите первое число:" Margin="22,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите второе число:" Margin="23,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите третье число:" Margin="22,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Margin="55,242,0,0" Header="Вторая тройка чисел:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Height="163">
+            <Grid HorizontalAlignment="Left" Width="299">
+                <TextBox x:Name="inputValueA" Opacity="0.7" Width="100" Margin="194,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValueB" Opacity="0.7" Width="100" Margin="194,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <TextBox x:Name="inputValueC" Opacity="0.7" Width="100" Margin="194,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите первое число:" Margin="22,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите второе число:" Margin="23,55,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+                <Label Content="Введите третье число:" Margin="22,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Margin="449,166,0,0" Header="Результаты:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="318" Height="116">
+            <Grid>
+                <Label Content="Сумма первой тройки:" HorizontalAlignment="Left" Height="32" Margin="10,16,0,0" VerticalAlignment="Top" Width="171"/>
+                <TextBox x:Name="amount1" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Margin="194,11,0,0"  Width="101"/>
+                <Label Content="Сумма второй тройки:" HorizontalAlignment="Left" Height="32" Margin="10,50,0,0" VerticalAlignment="Top" Width="171"/>
+                <TextBox x:Name="amount2" IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Margin="194,53,0,0"  Width="101"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Сравнить две тройки чисел" x:Name="compare" HorizontalAlignment="Left" Height="30" Margin="470,57,0,0" VerticalAlignment="Top" Width="276" Click="Compare_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Рассчитать и сравнить суммы" HorizontalAlignment="Left" Height="30" Margin="470,303,0,0" VerticalAlignment="Top" Width="276" Click="Calculate_and_Compare_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Height="30" Margin="470,353,0,0" VerticalAlignment="Top" Width="276" Click="Clear_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="О программе" HorizontalAlignment="Left" Height="30" Margin="470,401,0,0" VerticalAlignment="Top" Width="128" Click="About_Program_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Height="30" Margin="618,401,0,0" VerticalAlignment="Top" Width="128" Click="Exit_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Проверить равенство &#xD;&#xA;в первой тройке" HorizontalAlignment="Left" Height="40" Margin="470,101,0,0" VerticalAlignment="Top" Width="128" Click="Triad1_Check_Click" Cursor="Hand" Background="#FF7B83D2"/>
+        <Button Content="Проверить равенство &#xD;&#xA;во второй тройке" HorizontalAlignment="Left" Height="40" Margin="618,101,0,0" VerticalAlignment="Top" Width="128" Click="Triad2_Check_Click" Cursor="Hand" Background="#FF7B83D2"/>
+    </Grid>
+</Window>
